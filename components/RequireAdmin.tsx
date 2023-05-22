@@ -10,7 +10,7 @@ export const RequireAdmin: React.FC = () => {
 
     useEffect(() => {
         if (!isAdmin) {
-            redirect('/admin/login')
+            redirect('/admin-login')
         }
     }, [isAdmin])
 
