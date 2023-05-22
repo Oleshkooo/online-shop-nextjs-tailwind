@@ -1,6 +1,6 @@
 type Pages = Record<string, Breadcrumb>
 
-export const pages: Pages = {
+export const pages = {
     main: {
         name: 'Головна',
         path: '/',
@@ -9,8 +9,12 @@ export const pages: Pages = {
         name: 'Товари',
         path: '/products',
     },
+    cart: {
+        name: 'Кошик',
+        path: '/cart',
+    },
     admin: {
         name: 'Адмін',
         path: '/admin',
     },
-}
+} satisfies Pages

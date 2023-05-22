@@ -15,7 +15,7 @@ export const ShopProduct: React.FC<ShopProductProps> = ({ item }) => {
                 backgroundImage: `url(${item.image})`,
                 backgroundSize: 'cover',
             }}
-            className="flex items-end h-96"
+            className="flex items-end h-96 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer rounded-2x"
         >
             <div className="w-full backdrop-blur-sm">
                 <div className="bg-white/70 px-2 py-2">

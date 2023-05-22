@@ -19,12 +19,12 @@ const montserrat = Montserrat({ subsets: ['latin', 'cyrillic'] })
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     return (
         <html lang="en">
-            <body className={montserrat.className}>
+            <body className={montserrat.className} suppressHydrationWarning>
                 <Toaster containerClassName="toaster" position="top-center" reverseOrder={false} />
                 <ReduxProvider>
                     <Navbar title="VShop" />
                     <div className="py-11" />
-                    <div className="container mx-auto">{children}</div>
+                    <div className="container">{children}</div>
                 </ReduxProvider>
             </body>
         </html>

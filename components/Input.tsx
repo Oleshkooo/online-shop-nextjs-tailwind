@@ -1,4 +1,4 @@
-interface InputProps extends JSX.IntrinsicAttributes, React.HTMLAttributes<HTMLInputElement> {
+interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
     name: string
     value: string
     type?: 'text' | 'password' | 'email'

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 
 import { store } from '@/redux'
 
-interface ReduxProviderProps extends JSX.IntrinsicAttributes {
+interface ReduxProviderProps {
     children?: React.ReactNode
 }
 

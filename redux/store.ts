@@ -1,8 +1,8 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/dist/query/react'
 import { useDispatch, useSelector, type TypedUseSelectorHook } from 'react-redux'
-import { persistReducer, persistStore } from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
+// import { persistReducer, persistStore } from 'redux-persist'
+// import storage from 'redux-persist/lib/storage'
 
 import { userSlice } from './slices/userSlice'
 
@@ -16,15 +16,16 @@ const rootReducer = combineReducers({
     [userSlice.name]: userSlice.reducer,
 })
 
-const persistConfig = {
-    key: 'root',
-    storage,
-}
+// const persistConfig = {
+//     key: 'root',
+//     storage,
+// }
 
-const persistedReducer = persistReducer(persistConfig, rootReducer)
+// const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
-    reducer: persistedReducer,
+    // reducer: persistedReducer,
+    reducer: rootReducer,
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware({
             serializableCheck: false,
@@ -32,6 +33,6 @@ export const store = configureStore({
     devTools: process.env.NODE_ENV === 'development',
 })
 
-export const persistor = persistStore(store)
+// export const persistor = persistStore(store)
 
 setupListeners(store.dispatch)

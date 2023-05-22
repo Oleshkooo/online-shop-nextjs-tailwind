@@ -2,10 +2,11 @@ import { type NextPage } from 'next'
 import { redirect } from 'next/navigation'
 
 import { Breadcrumbs } from '@/components/Breadcrumbs'
+import { Img } from '@/components/Img'
 import { pages } from '@/config/pages'
 import { getExactProduct } from '@/prisma/products'
 
-import { Img } from './Img'
+import { AddToCart } from './AddToCart'
 
 interface ItemExactProps {
     params: {
@@ -58,6 +59,7 @@ const ItemExact: NextPage<ItemExactProps> = async ({ params }) => {
                     width={2000}
                     height={2000}
                     className="px-10"
+                    priority
                 />
                 <div className="pt-10">
                     <h1 className="text-5xl leading-tight font-medium">{item.name}</h1>
@@ -67,6 +69,10 @@ const ItemExact: NextPage<ItemExactProps> = async ({ params }) => {
 
                     <h3 className="text-3xl font-medium">Опис</h3>
                     <p className="pt-3 leading-relaxed">{item.description}</p>
+
+                    <div className="py-5" />
+
+                    <AddToCart product={item} />
                 </div>
             </div>
             <div className="py-4" />

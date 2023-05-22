@@ -1,6 +1,6 @@
 'use client'
 
-interface ButtonProps extends JSX.IntrinsicAttributes, React.HTMLAttributes<HTMLButtonElement> {}
+interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {}
 
 export const Button: React.FC<ButtonProps> = ({ onClick, children }) => {
     return (

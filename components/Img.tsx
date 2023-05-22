@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-interface ImgProps extends JSX.IntrinsicAttributes, React.HTMLAttributes<HTMLImageElement> {
+interface ImgProps extends React.HTMLAttributes<HTMLImageElement> {
     src: string
     alt: string
     width: number
