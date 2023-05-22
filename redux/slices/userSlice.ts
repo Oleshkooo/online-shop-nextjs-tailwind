@@ -1,6 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 
-import { type Product } from '@/app/types'
+import { type Product } from '@prisma/client'
 
 interface UserState {
     isAdmin: boolean
